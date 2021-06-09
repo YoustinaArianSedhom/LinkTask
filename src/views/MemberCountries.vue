@@ -60,18 +60,18 @@
             <div
               class="grid gap-6 grid-cols-3 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 mt-6"
             >
-              <img
+              <!-- <img
                 v-for="(item, index) in item.Images"
                 :key="index"
                 class="responsive ml-4 rounded-bl-3xl w-full h-32 w-20 rounded-t-3xl"
                 :src="require(`@/assets/images/flags/${item}.png`)"
                 alt="banner"
-              />
-              <img
+              /> -->
+              <!-- <img
                 class="responsive shadow-xl cursor-pointer ml-4 rounded-bl-3xl w-full h-32 w-20 rounded-t-3xl"
                 :src="require(`@/assets/images/Plus.png`)"
                 alt="banner"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -107,11 +107,11 @@
   </div>
 </template>
 <script>
-import SimpleCalendar from "@/views/SimpleCalendar.vue";
+// import SimpleCalendar from "@/views/SimpleCalendar.vue";
 
 export default {
   components: {
-    SimpleCalendar
+    // SimpleCalendar
   },
   data() {
     return {

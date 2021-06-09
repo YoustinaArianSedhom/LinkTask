@@ -20,7 +20,7 @@
         <div class="con-img ml-3">
           <img
             key="onlineImg"
-            src="@/assets/images/flags/ar.png"
+            src="@/assets/images/img.png"
             alt="user-img"
             width="40"
             height="40"

@@ -174,9 +174,7 @@
       </div>
     </div>
 
-    <div
-      class="ml-4 w-full px-2 sm:px-0 md:px-4 lg:px-24 xl:px-64 px-2 mt-10 mb-10"
-    >
+    <div class="ml-4 w-full px-2 sm:px-0 md:px-4 lg:px-24 xl:px-64 mt-10 mb-10">
       <div class="flex flex-wrap -mx-2">
         <div class="w-full xs:w-full bg sm:w-full px-2 mb-2">
           <div class="vx-row bg-white w-full">
@@ -218,9 +216,7 @@
     </div>
     <!-- DONE -->
 
-    <div
-      class="ml-4 w-full px-2 sm:px-0 md:px-4 lg:px-24 xl:px-64 px-2 mt-10 mb-10"
-    >
+    <div class="ml-4 w-full px-2 sm:px-0 md:px-4 lg:px-24 xl:px-64 mt-10 mb-10">
       <ul class="vx-timeline">
         <li>
           <div class="vx-row flex-wrap mb-4 ">
@@ -249,7 +245,7 @@
       </ul>
     </div>
     <div
-      class="vx-row sm:px-0 md:px-4 lg:px-24 xl:px-64 px-2 mt-10  flex justify-center  bg-white w-full mt-10 mb-10"
+      class="vx-row sm:px-0 md:px-4 lg:px-24 xl:px-64 px-2 flex justify-center  bg-white w-full mt-10 mb-10"
     >
       <div class="sm:w-1/3 md:w-1/3 lg:w-1/3  xl:w-1/3 w-full ">
         <h1 class="text-center align-bottom ml-4 mr-4 mt-6 ">

@@ -85,8 +85,9 @@ export default {
   },
   watch: {
     $route() {
-      if (this.showBookmarkPagesDropdown)
+      if (this.showBookmarkPagesDropdown) {
         this.showBookmarkPagesDropdown = false;
+      }
     }
   },
   computed: {
@@ -128,8 +129,8 @@ export default {
           this.$store.state.mainLayoutType === "vertical" &&
           this.navbarColor !==
             (this.$store.state.theme === "dark"
-              ? "#10163a"
-              : ",'hover:bg-blue-700'#fff")
+              ? "#038896"
+              : ",'hover:bg-blue-700'#038896")
       };
     }
   },

@@ -70,7 +70,7 @@ export default {
   },
   computed: {
     navbarColor() {
-      return this.$store.state.theme === "dark" ? "#10163a" : "#fff";
+      return this.$store.state.theme === "dark" ? "#038896" : "#038896";
     }
   },
   methods: {
@@ -83,11 +83,18 @@ export default {
 
       if (group.submenu) {
         group.submenu.forEach(item => {
-          if (active) return true;
+          if (active) {
+            return true;
+          }
+
           if ((path === item.url || routeParent === item.slug) && item.url) {
-            active = true;
+            {
+              active = true;
+            }
           } else if (item.submenu) {
-            this.checkGrpChildrenActive(item);
+            {
+              this.checkGrpChildrenActive(item);
+            }
           }
         });
       }

@@ -62,7 +62,7 @@ export default {
   props: {
     navbarColor: {
       type: String,
-      default: "#fff"
+      default: "#038896"
     }
   },
   components: {
@@ -76,8 +76,9 @@ export default {
   },
   computed: {
     navbarColorLocal() {
-      return this.$store.state.theme === "dark" && this.navbarColor === "#fff"
-        ? "#10163a"
+      return this.$store.state.theme === "dark" &&
+        this.navbarColor === "#038896"
+        ? "#038896"
         : this.navbarColor;
     },
     verticalNavMenuWidth() {
@@ -86,21 +87,25 @@ export default {
     textColor() {
       return {
         "text-white":
-          (this.navbarColor !== "#10163a" &&
+          (this.navbarColor !== "#038896" &&
             this.$store.state.theme === "dark") ||
-          (this.navbarColor !== "#fff" && this.$store.state.theme !== "dark")
+          (this.navbarColor !== "#038896" && this.$store.state.theme !== "dark")
       };
     },
     windowWidth() {
       return this.$store.state.windowWidth;
-    },
+    }
 
     // NAVBAR STYLE
-    classObj() {
-      if (this.verticalNavMenuWidth === "default") return "navbar-default";
-      else if (this.verticalNavMenuWidth === "reduced") return "navbar-reduced";
-      else if (this.verticalNavMenuWidth) return "navbar-full";
-    }
+    // classObj() {
+    //   if (this.verticalNavMenuWidth === "default") {
+    //     return "navbar-default";
+    //   } else if (this.verticalNavMenuWidth === "reduced") {
+    //     return "navbar-reduced";
+    //   } else if (this.verticalNavMenuWidth) {
+    //     return "navbar-full";
+    //   }
+    // }
   },
   methods: {
     showSidebar() {
