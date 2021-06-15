@@ -10,22 +10,20 @@
 
 <template>
   <div class="relative">
-    <div class="vx-navbar-wrapper" :class="classObj">
+    <!-- :class="classObj" -->
+    <div class="vx-navbar-wrapper">
       <vs-navbar
-        class="vx-navbar navbar-custom navbar-skelton"
-        :color="navbarColorLocal"
-        :class="textColor"
+        class="vx-navbar navbar-custom navbar-skelton bg-primary text-white"
       >
         <!-- SM - OPEN SIDEBAR BUTTON -->
         <feather-icon
-          class="sm:inline-flex xl:hidden cursor-pointer p-2"
+          class=" cursor-pointer p-2"
           icon="MenuIcon"
           @click.stop="showSidebar"
         />
 
-        <bookmarks :navbarColor="navbarColor" v-if="windowWidth >= 992" />
+        <!-- <bookmarks :navbarColor="navbarColor" v-if="windowWidth >= 992" /> -->
 
-        <vs-spacer v-if="windowWidth >= 992" />
         <router-link
           tag="div"
           to="/"
@@ -33,14 +31,20 @@
         >
           <logo class="w-16 mr-6 ml-6 fill-current text-primary" />
         </router-link>
+        <vs-spacer v-if="windowWidth >= 992" />
 
         <!-- <i18n class="ml-2 mr-2" /> -->
 
         <!-- <search-bar /> -->
 
         <!-- <cart-drop-down /> -->
+        <feather-icon
+          class=" cursor-pointer p-2"
+          icon="SearchIcon"
+          @click.stop="showSidebar"
+        />
 
-        <!-- <notification-drop-down class="ml-2" /> -->
+        <notification-drop-down class="ml-2" />
 
         <profile-drop-down />
       </vs-navbar>
@@ -49,11 +53,11 @@
 </template>
 
 <script>
-import Bookmarks from "./components/Bookmarks.vue";
+// import Bookmarks from "./components/Bookmarks.vue";
 // import I18n from "./components/I18n.vue";
 // import SearchBar from "./components/SearchBar.vue";
 // import CartDropDown from "./components/CartDropDown.vue";
-// import NotificationDropDown from "./components/NotificationDropDown.vue";
+import NotificationDropDown from "./components/NotificationDropDown.vue";
 import ProfileDropDown from "./components/ProfileDropDown.vue";
 import Logo from "../Logo.vue";
 
@@ -66,12 +70,12 @@ export default {
     }
   },
   components: {
-    Bookmarks,
+    // Bookmarks,
     Logo,
     // I18n,
     // SearchBar,
     // CartDropDown,
-    // NotificationDropDown,
+    NotificationDropDown,
     ProfileDropDown
   },
   computed: {

@@ -263,10 +263,8 @@
 </template>
 
 <script>
-import moduleGeneral from "@/store/General/moduleGeneral.js";
-import axios from "@/axios.js";
 import country_JSON from "@/views/JsonFiles/Country.json";
-import vue2Dropzone from "vue2-dropzone";
+// import vue2Dropzone from "vue2-dropzone";
 import "vue2-dropzone/dist/vue2Dropzone.min.css";
 import check from "@/layouts/svg/check.vue";
 export default {
@@ -346,7 +344,7 @@ export default {
     }
   },
   components: {
-    vueDropzone: vue2Dropzone,
+    // vueDropzone: vue2Dropzone,
     check
   },
   methods: {
@@ -398,7 +396,9 @@ export default {
         // queued file, not yet uploaded. Just remove from the arrays
         this.fileRecordsForUpload.splice(i, 1);
         var k = this.Model.logo.indexOf(fileRecord);
-        if (k !== -1) this.Model.logo.splice(k, 1);
+        if (k !== -1) {
+          this.Model.logo.splice(k, 1);
+        }
       } else {
         if (confirm("Are you sure you want to delete?")) {
           this.$refs.vueFileAgent.deleteFileRecord(fileRecord); // will trigger 'delete' event
@@ -446,7 +446,7 @@ export default {
             window.showSuccess();
           }
         })
-        .catch(err => {
+        .catch(() => {
           debugger;
           this.$vs.loading.close();
           window.showError();

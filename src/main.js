@@ -23,15 +23,18 @@ import moment from "moment";
 
 Vue.filter("formatDateHour", function(value) {
   if (value) {
-    return moment(String(value)).format("DD MMMM, YYYY");
+    return moment(String(value)).format("DD/MM/YYYY HH:mm:ss");
   }
 });
-
+// import "bootstrap";
 Vue.filter("formatDate", function(value) {
   if (value) {
     return moment(String(value)).format("MMMM YYYY");
   }
 });
+import { BootstrapVue } from "bootstrap-vue";
+
+Vue.use(BootstrapVue);
 //Idle timeout
 import IdleVue from "idle-vue";
 
@@ -45,7 +48,7 @@ Vue.use(IdleVue, {
 });
 
 import VueFileAgent from "vue-file-agent";
-import VueFileAgentStyles from "vue-file-agent/dist/vue-file-agent.css";
+// import VueFileAgentStyles from "vue-file-agent/dist/vue-file-agent.css";
 
 Vue.use(VueFileAgent);
 // axios

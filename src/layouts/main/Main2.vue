@@ -58,7 +58,7 @@
         />
 
         <div style="height: 62px;" v-if="navbarType === 'static'"></div>
-        <!-- 
+        <!--
         <h-nav-menu
           :class="[
             { 'text-white': isNavbarDark && !isThemeDark },

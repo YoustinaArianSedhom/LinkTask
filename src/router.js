@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import store from "@/store/store.js";
+// import store from "@/store/store.js";
 
 Vue.use(Router);
 
@@ -57,9 +57,9 @@ const router = new Router({
           }
         },
         {
-          path: "/payments",
-          name: "Payments",
-          component: () => import("@/views/Payments.vue"),
+          path: "/NewsDetails",
+          name: "NewsDetails",
+          component: () => import("@/views/NewsDetails.vue"),
           meta: {
             rule: "isPublic"
           }

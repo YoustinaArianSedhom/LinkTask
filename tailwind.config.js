@@ -75,7 +75,7 @@ module.exports = {
       beige: "#E7F6EF",
       grey: "##707070",
       "grey-light": "#B7B7B7",
-      colorPrimary: "#27ABBE",
+      colorPrimary: "#038896",
       colorPrimaryDark: "#3B6077",
       colorAccent: "#F8BD30",
       colorRed: "#B11226",

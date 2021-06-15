@@ -48,7 +48,7 @@ let colors = {
   // 'white': '#ffffff',
   // 'grey': '#b8c2cc',
   // 'grey-light': '#dae1e7',
-  colorPrimary: "#27ABBE",
+  colorPrimary: "#038896",
   colorPrimaryDark: "#3B6077",
   colorAccent: "#F8BD30",
   colorRed: "#B11226",

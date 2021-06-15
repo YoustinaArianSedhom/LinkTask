@@ -53,7 +53,7 @@ const state = {
   AppActiveUser: getUserInfo(),
   bodyOverlay: false,
   isVerticalNavMenuActive: true,
-  mainLayoutType: themeConfig.mainLayoutType || "horizontal",
+  mainLayoutType: "vertical",
   navbarSearchAndPinList: navbarSearchAndPinList,
   reduceButton: themeConfig.sidebarCollapsed,
   verticalNavMenuWidth: "default",
@@ -63,7 +63,7 @@ const state = {
     page => page.is_bookmarked
   ),
 
-  theme: themeConfig.theme || "light",
+  theme: themeConfig.theme || "semi-dark",
   themePrimaryColor: colors.primary,
 
   // Can be used to get current window with
