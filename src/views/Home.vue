@@ -38,7 +38,7 @@
     <div class="vx-row">
       <div
         class="vx-col w-full sm:w-1/2 lg:w-1/3 mb-base"
-        v-for="(post3Column, index) of blogColumn3.sourceCategory"
+        v-for="(post3Column, index) of blogColumn3.articles"
         :key="index"
       >
         <vx-card

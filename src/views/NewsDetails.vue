@@ -24,22 +24,21 @@
     <div class="vx-row">
       <div
         class="vx-col w-full sm:w-1/2 lg:w-1/3 mb-base"
-        v-for="(post3Column, index) of blogColumn3.articles"
+        v-for="(post3Column, index) of blogColumn3.sourceCategory"
         :key="index"
       >
         <vx-card
           class="vx-col"
-          style="height :450px;"
-          @click="GoToDetails(post3Column)"
+          style="background-image:https://images.mktw.net/im-231687/social;"
         >
           <div slot="no-body">
-            <img
+            <!-- <img
               :src="post3Column.urlToImage"
               alt="Card image cap"
               class="card-img-top"
               title=""
               style=" height:200px; width: 400px;"
-            />
+            /> -->
           </div>
           <div class="card-body border-rad-bottom">
             <h4 class="card-title mb-2">
