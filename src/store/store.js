@@ -18,12 +18,6 @@ import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
 
-// import moduleTodo from './todo/moduleTodo.js'
-import moduleGeneral from "./General/moduleGeneral.js";
-// import moduleChat from './chat/moduleChat.js'
-// import moduleEmail from './email/moduleEmail.js'
-import moduleAuth from "./auth/moduleAuth.js";
-
 // import moduleECommerce from './eCommerce/moduleECommerce.js'
 
 export default new Vuex.Store({
@@ -34,10 +28,8 @@ export default new Vuex.Store({
   actions,
   modules: {
     // todo: moduleTodo,
-    general: moduleGeneral,
     // chat: moduleChat,
     // email: moduleEmail,
-    auth: moduleAuth
     // eCommerce: moduleECommerce,
   },
   strict: process.env.NODE_ENV !== "production"

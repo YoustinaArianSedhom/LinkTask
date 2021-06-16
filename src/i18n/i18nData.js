@@ -89,7 +89,6 @@ export default {
     ComingSoon: "Coming soon",
     404: "404",
     500: "500",
-    NotAuthorized: "Not Authorized",
     Maintenance: "Maintenance",
     Filters: "Filters",
     Profile: "Profile",

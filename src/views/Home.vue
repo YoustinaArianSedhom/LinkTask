@@ -1,7 +1,7 @@
 <template>
   <!-- id="container2"
     class="flex  w-full bg-img vx-row no-gutter justify-center items-center " -->
-  <div>
+  <div class="mt-17">
     <!-- swiper -->
     <div class="vx-row bg-white w-full mt-2">
       <div class="w-full ">
@@ -138,11 +138,9 @@ export default {
     return {
       blogColumn3,
       List: [
-        require("@/assets/images/Clip@1X.png"),
-        require("@/assets/images/Clip@1X.png"),
-        require("@/assets/images/Clip@1X.png"),
-        require("@/assets/images/Clip@1X.png"),
-        require("@/assets/images/Clip@1X.png")
+        require("@/assets/images/Untitled.png"),
+        require("@/assets/images/Untitled2.png"),
+        require("@/assets/images/Untitled3.png")
       ],
       swiperOption: {
         zoom: true,

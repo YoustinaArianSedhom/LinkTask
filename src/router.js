@@ -40,23 +40,6 @@ const router = new Router({
         // =============================================================================
 
         {
-          path: "/register",
-          name: "Register",
-          component: () => import("@/views/register/Register.vue"),
-          meta: {
-            rule: "isPublic"
-          }
-        },
-
-        {
-          path: "/contactUs",
-          name: "ContactUs",
-          component: () => import("@/views/ContactUs.vue"),
-          meta: {
-            rule: "isPublic"
-          }
-        },
-        {
           path: "/NewsDetails",
           name: "NewsDetails",
           component: () => import("@/views/NewsDetails.vue"),
@@ -69,56 +52,6 @@ const router = new Router({
           name: "News",
           component: () => import("@/views/News.vue"),
           meta: {
-            rule: "isPublic"
-          }
-        },
-        {
-          path: "/events",
-          name: "Events",
-          component: () => import("@/views/Events.vue"),
-          meta: {
-            rule: "isPublic"
-          }
-        },
-        {
-          path: "/competitions",
-          name: "Competitions",
-          component: () => import("@/views/Competitions.vue"),
-          meta: {
-            rule: "isPublic"
-          }
-        },
-        {
-          path: "/memberCountries",
-          name: "MemberCountries",
-          component: () => import("@/views/MemberCountries.vue"),
-          meta: {
-            rule: "isPublic"
-          }
-        },
-        {
-          path: "/members",
-          name: "Members",
-          component: () => import("@/views/CountryMembers.vue"),
-          meta: {
-            breadcrumb: [
-              { title: "Home", url: "/" },
-              { title: "Member Countries", url: "/memberCountries" },
-              { title: "members", active: true }
-            ],
-            rule: "isPublic"
-          }
-        },
-        {
-          path: "/regularCompetition",
-          name: "RegularCompetition",
-          component: () => import("@/views/RegularCompetition.vue"),
-          meta: {
-            breadcrumb: [
-              { title: "Home", url: "/" },
-              { title: "Competitions", url: "/competitions" },
-              { title: "Regular Competition", active: true }
-            ],
             rule: "isPublic"
           }
         }
@@ -135,30 +68,7 @@ const router = new Router({
         // =============================================================================
         // PAGES
         // =============================================================================
-
-        {
-          path: "/pages/Error404",
-          name: "Error404",
-          component: () => import("@/views/pages/Error404.vue"),
-          meta: {
-            rule: "isPublic"
-          }
-        },
-
-        {
-          path: "/pages/NotAuthorized",
-          name: "NotAuthorized",
-          component: () => import("@/views/pages/NotAuthorized.vue"),
-          meta: {
-            rule: "isPublic"
-          }
-        }
       ]
-    },
-    // Redirect to 404 page, if no match found
-    {
-      path: "*",
-      redirect: "/pages/Error404"
     }
   ]
 });
