@@ -54,6 +54,14 @@ export default [
     show: UserRole,
     i18n: "Events"
   },
+  {
+    url: "/News",
+    name: "News",
+    slug: "News",
+    icon: "CalendarIcon",
+    show: UserRole,
+    i18n: "News"
+  },
 
   {
     url: "/payments",

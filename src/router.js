@@ -65,6 +65,14 @@ const router = new Router({
           }
         },
         {
+          path: "/News",
+          name: "News",
+          component: () => import("@/views/News.vue"),
+          meta: {
+            rule: "isPublic"
+          }
+        },
+        {
           path: "/events",
           name: "Events",
           component: () => import("@/views/Events.vue"),

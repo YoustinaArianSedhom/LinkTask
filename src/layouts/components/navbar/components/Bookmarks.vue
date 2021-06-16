@@ -71,6 +71,7 @@ export default {
         { url: "/memberCountries", title: "Member Countries" },
         { url: "/competitions", title: "Competitions" },
         { url: "/events", title: "Events" },
+        { url: "/News", title: "News" },
         { url: "/payments", title: "Payments" },
         { url: "/contactUs", title: "Contact Us" }
       ],

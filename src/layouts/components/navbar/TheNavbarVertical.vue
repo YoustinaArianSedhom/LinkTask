@@ -38,11 +38,7 @@
         <!-- <search-bar /> -->
 
         <!-- <cart-drop-down /> -->
-        <feather-icon
-          class=" cursor-pointer p-2"
-          icon="SearchIcon"
-          @click.stop="showSidebar"
-        />
+        <feather-icon class=" cursor-pointer p-2" icon="SearchIcon" />
 
         <notification-drop-down class="ml-2" />
 
@@ -68,6 +64,11 @@ export default {
       type: String,
       default: "#038896"
     }
+  },
+  data() {
+    return {
+      navBar: false
+    };
   },
   components: {
     // Bookmarks,
@@ -113,7 +114,13 @@ export default {
   },
   methods: {
     showSidebar() {
-      this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", true);
+      if (this.navBar == false) {
+        this.navBar = true;
+        this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", true);
+      } else {
+        this.navBar = false;
+        this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", false);
+      }
     }
   }
 };
