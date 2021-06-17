@@ -21,15 +21,9 @@ Vue.filter("numFormat", numFormat(numeral));
 
 import moment from "moment";
 
-Vue.filter("formatDateHour", function(value) {
-  if (value) {
-    return moment(String(value)).format("DD/MM/YYYY HH:mm:ss");
-  }
-});
-// import "bootstrap";
 Vue.filter("formatDate", function(value) {
   if (value) {
-    return moment(String(value)).format("MMMM YYYY");
+    return moment(String(value)).format("DD MMMM YYYY");
   }
 });
 import { BootstrapVue } from "bootstrap-vue";

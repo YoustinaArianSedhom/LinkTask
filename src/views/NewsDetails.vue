@@ -13,9 +13,9 @@
         </div>
         <div class="card-body border-rad-bottom">
           <h4 class="mb-2">
-            <a href="/blog-detail">{{ Model.title }}</a>
+            {{ Model.title }}
           </h4>
-          <p>{{ Model.content }}</p>
+          <span>{{ Model.content }}</span>
         </div>
       </vx-card>
     </div>

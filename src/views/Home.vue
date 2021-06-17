@@ -43,7 +43,7 @@
       >
         <vx-card
           class="vx-col"
-          style="height :450px;"
+          style="height :500px;"
           @click="GoToDetails(post3Column)"
         >
           <div slot="no-body">
@@ -55,76 +55,49 @@
               style=" height:200px; width: 400px;"
             />
           </div>
-          <div class="card-body border-rad-bottom">
-            <h4 class="card-title mb-2">
-              {{ post3Column.title }}
-            </h4>
-            <p class="card-text">{{ post3Column.content }}</p>
-            <div class="card-footer pt-2 p-0">
-              <div class="d-flex justify-content-between">
-                <a class="d-flex align-content-start ">
-                  <i class="fa fa-calendar-o mr-2 align-self-center"></i>
-                  <span class="font-sm text-capitalize">{{
-                    post3Column.publishedAt | formatDate()
-                  }}</span>
-                </a>
-                <!-- <a class="d-flex align-content-end text-muted">
-                <i
-                  :class="post3Column.user_icon"
-                  class="fa align-self-center mr-2"
-                ></i>
-                <span class="font-sm">{{ post3Column.user_name }}</span>
-              </a> -->
+          <!-- <div> -->
+          <div class="justify-end">
+            <feather-icon
+              icon="HeartIcon"
+              svgClasses="h-6 w-6 "
+              class="iconColor  text-bold p-2"
+            />
+            <feather-icon
+              icon="Share2Icon"
+              svgClasses="h-6 w-6 "
+              class="iconColor text-bold p-2"
+            />
+          </div>
+          <h4 class="card-title mb-2 text-2xl">
+            {{ post3Column.title }}
+          </h4>
+          <vs-button
+            size="small"
+            color="#dddddd"
+            class="text-black text-base"
+            type="filled"
+          >
+            News</vs-button
+          >
+          <p class="card-text">{{ post3Column.content }}</p>
+          <div class="card-footer pt-2 p-0">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <feather-icon
+                  icon="CalendarIcon"
+                  svgClasses="h-5 w-5"
+                  class="text-primary"
+                />
+                <span class="font-sm text-capitalize">{{
+                  post3Column.publishedAt | formatDate()
+                }}</span>
               </div>
             </div>
           </div>
+          <!-- </div> -->
         </vx-card>
       </div>
     </div>
-    <!-- <div class="post-section blog-v3 load-more-contain section-gap">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-sm-12 col-md-6 col-lg-4"
-            v-for="(post3Column, index) of blogColumn3.articles"
-            :key="index"
-          >
-            <div class="card border-0 border-rad mb-0">
-              <img
-                class="border-rad-top img-fluid w-100"
-                :src="post3Column.urlToImage"
-                alt="Card image cap"
-                width="370"
-                height="250"
-              />
-              <div class="card-body border-rad-bottom">
-                <h4 class="card-title mb-2">
-                  <a href="/blog-detail">{{ post3Column.title }}</a>
-                </h4>
-                <p class="card-text">{{ post3Column.content }}</p>
-                <div class="card-footer pt-2 p-0">
-                  <div class="d-flex justify-content-between">
-                    <a class="d-flex align-content-end text-muted">
-                      <i
-                        :class="post3Column.user_icon"
-                        class="fa align-self-center mr-2"
-                      ></i>
-                      <span class="font-sm">{{ post3Column.user_name }}</span>
-                    </a>
-                    <a class="d-flex align-content-start ">
-                      <i class="fa fa-calendar-o mr-2 align-self-center"></i>
-                      <span class="font-sm text-capitalize">{{
-                        post3Column.publishedAt
-                      }}</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -212,17 +185,10 @@ export default {
 #container2 {
   position: relative;
 }
-// #Arrow {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   bottom: 7%;
-//   right: 0;
-//   height: 35px !important;
-//   width: fit-content !important;
-//   margin: auto;
-//   padding-bottom: 20px;
-// }
+
+.iconColor {
+  color: #b3e283;
+}
 #circle {
   position: absolute;
   left: 0;

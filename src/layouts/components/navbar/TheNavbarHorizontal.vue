@@ -30,12 +30,6 @@
           v-if="windowWidth >= 992"
         />
 
-        <!-- <i18n class="ml-2 mr-2" /> -->
-
-        <!-- <cart-drop-down /> -->
-
-        <!-- <notification-drop-down /> -->
-
         <profile-drop-down />
       </vs-navbar>
     </div>
@@ -44,9 +38,6 @@
 
 <script>
 import Bookmarks from "./components/Bookmarks.vue";
-// import I18n from "./components/I18n.vue";
-// import CartDropDown from "./components/CartDropDown.vue";
-// import NotificationDropDown from "./components/NotificationDropDown.vue";
 import ProfileDropDown from "./components/ProfileDropDown.vue";
 import Logo from "../Logo.vue";
 
