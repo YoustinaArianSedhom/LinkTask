@@ -25,7 +25,7 @@
       <div
         v-for="(post3Column, index) of sourceCategory"
         :key="index"
-        class="relative mb-base rounded-lg  w-full sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3 FixedHeight  m-1"
+        class="relative mb-base rounded-lg  w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4 FixedHeight mx-1"
         style="background-image: url('https://travel.mqcdn.com/mapquest/travel/wp-content/uploads/2020/06/GettyImages-548565141-e1592719799177.jpg')"
       >
         <div

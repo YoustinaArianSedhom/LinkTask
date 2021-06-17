@@ -79,7 +79,7 @@
       </template>
       <!-- /Navbar -->
 
-      <div class="content-wrapper sm:px-0 md:px-4 lg:px-24 xl:px-64">
+      <div class="content-wrapper ">
         <div class="router-view">
           <div class="router-content">
             <transition :name="routerTransition">

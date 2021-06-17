@@ -11,11 +11,9 @@
 <!--functional -->
 <template>
   <footer class="text-black" :class="classes">
-    <vs-row
-      class="mt-16 font-medium bg-grey-light sm:px-0 md:px-4 lg:px-24 xl:px-64 "
-    >
-      <vs-col class="text-gray mb-4" vs-lg="3" vs-sm="3" vs-xs="12">
-        <ul class="mt-4">
+    <vs-row class="mt-14 font-medium light  ">
+      <vs-col vs-lg="3" vs-sm="3" vs-xs="12">
+        <ul class="mt-4 ml-5">
           <li class="mb-2">
             <span>
               News
@@ -38,117 +36,84 @@
           </li>
         </ul>
       </vs-col>
-      <vs-col class="mb-4" vs-lg="3" vs-sm="3" vs-xs="12">
-        <span class="mb-8">About Us</span>
+
+      <vs-col vs-lg="3" vs-sm="3" vs-xs="12">
         <ul class="mt-4">
           <li class="mb-2">
             <span>
-              <a
-                class="text-gray"
-                href="https://www.google.com"
-                target="_blank"
-                rel="nofollow"
-              >
-                About Us</a
-              >
+              Privary & Policy
             </span>
           </li>
 
           <li class="mb-2">
             <span>
-              <a
-                class="text-gray"
-                href="https://www.google.com"
-                target="_blank"
-                rel="nofollow"
-              >
-                Work Protfolio</a
-              >
+              Contact Us
             </span>
           </li>
 
           <li class="mb-2">
             <span>
-              <a
-                class="text-gray"
-                href="https://www.google.com"
-                target="_blank"
-                rel="nofollow"
-              >
-                Team</a
-              >
-            </span>
-          </li>
-
-          <li class="mb-2">
-            <span>
-              <a
-                class="text-gray"
-                href="https://www.google.com"
-                target="_blank"
-                rel="nofollow"
-              >
-                Plan & Pricing</a
-              >
+              Complains
             </span>
           </li>
         </ul>
       </vs-col>
-      <vs-col class="mb-4" vs-lg="2" vs-sm="3" vs-xs="12">
-        <span class="mb-8">Others</span>
+      <vs-col vs-lg="3" vs-sm="3" vs-xs="12">
         <ul class="mt-4">
           <li class="mb-2">
             <span>
-              <a
-                class="text-gray"
-                href="https://www.google.com"
-                target="_blank"
-                rel="nofollow"
-              >
-                Contacts</a
-              >
+              subscribe To News Litter
             </span>
           </li>
-
-          <li class="mb-2">
-            <span>
-              <a
-                class="text-gray"
-                href="https://www.google.com"
-                target="_blank"
-                rel="nofollow"
+          <li class="mb-2 vx-row">
+            <div class="inline-block">
+              <vs-input placeholder="Email Adress"></vs-input>
+            </div>
+            <div class="inline-block">
+              <vs-button
+                size="small"
+                color="#B3E283"
+                type="filled"
+                class="h-10"
               >
-                Privary & Policy</a
+                Subscribe</vs-button
               >
-            </span>
-          </li>
-
-          <li class="mb-2">
-            <span>
-              <a
-                class="text-gray"
-                href="https://www.google.com"
-                target="_blank"
-                rel="nofollow"
-              >
-                Legal</a
-              >
-            </span>
-          </li>
-
-          <li class="mb-2">
-            <span>
-              <a
-                class="text-gray"
-                href="https://www.google.com"
-                target="_blank"
-                rel="nofollow"
-              >
-                Help Center</a
-              >
-            </span>
+            </div>
           </li>
         </ul>
+      </vs-col>
+      <vs-col class="mt-4" vs-lg="3" vs-sm="3" vs-xs="12">
+        <a class="text-black" target="_blank">
+          <feather-icon
+            icon="TwitterIcon"
+            svgClasses="h-6 w-6"
+            class="ml-4 mr-4"
+          />
+        </a>
+
+        <a class="text-black" target="_blank">
+          <feather-icon
+            icon="FacebookIcon"
+            svgClasses="h-6 w-6"
+            class="ml-4 mr-4"
+          />
+        </a>
+
+        <a class="text-black" target="_blank">
+          <feather-icon
+            icon="InstagramIcon"
+            svgClasses="h-6 w-6"
+            class="ml-4 mr-4"
+          />
+        </a>
+
+        <a class="text-black" target="_blank">
+          <feather-icon
+            icon="LinkedinIcon"
+            svgClasses="h-6 w-6"
+            class="ml-4 mr-4"
+          />
+        </a>
       </vs-col>
     </vs-row>
     <vs-row>
@@ -174,24 +139,18 @@ export default {
     }
   },
   data() {
-    return {};
+    return { TechNumber: "+123 456 789" };
   },
   components: {},
-  computed: {
-    webSettings() {
-      return this.$store.state.auth.Settings;
-    },
-    webSettingsAddress() {
-      return this.$store.state.auth.Settings.address.split(",");
-    }
-  },
-  created() {
-    this.$store.dispatch("auth/Settings");
-  }
+  computed: {},
+  created() {}
 };
 </script>
 <style scoped>
 .text-white {
   color: #fff !important;
+}
+.light {
+  background-color: #dddddd;
 }
 </style>
