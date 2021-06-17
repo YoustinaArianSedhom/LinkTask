@@ -350,23 +350,27 @@ export default {
     onMenuSwipe(event) {
       if (event.direction === 4 && this.$vs.rtl) {
         // Swipe Right
-        if (this.isVerticalNavMenuActive && this.showCloseButton)
+        if (this.isVerticalNavMenuActive && this.showCloseButton) {
           this.isVerticalNavMenuActive = false;
+        }
       } else if (event.direction === 2 && !this.$vs.rtl) {
         // Swipe Left
-        if (this.isVerticalNavMenuActive && this.showCloseButton)
+        if (this.isVerticalNavMenuActive && this.showCloseButton) {
           this.isVerticalNavMenuActive = false;
+        }
       }
     },
     onSwipeAreaSwipe(event) {
       if (event.direction === 4 && !this.$vs.rtl) {
         // Swipe Right
-        if (!this.isVerticalNavMenuActive && this.showCloseButton)
+        if (!this.isVerticalNavMenuActive && this.showCloseButton) {
           this.isVerticalNavMenuActive = true;
+        }
       } else if (event.direction === 2 && this.$vs.rtl) {
         // Swipe Left
-        if (!this.isVerticalNavMenuActive && this.showCloseButton)
+        if (!this.isVerticalNavMenuActive && this.showCloseButton) {
           this.isVerticalNavMenuActive = true;
+        }
       }
     },
     psSectionScroll() {
@@ -375,14 +379,16 @@ export default {
       this.showShadowBottom = scroll_el.scrollTop > 0;
     },
     mouseEnter() {
-      if (this.reduce)
+      if (this.reduce) {
         this.$store.commit("UPDATE_VERTICAL_NAV_MENU_ITEMS_MIN", false);
-      this.ilgouseEnter = true;
+        this.ilgouseEnter = true;
+      }
     },
     mouseLeave() {
-      if (this.reduce)
+      if (this.reduce) {
         this.$store.commit("UPDATE_VERTICAL_NAV_MENU_ITEMS_MIN", true);
-      this.ilgouseEnter = false;
+        this.ilgouseEnter = false;
+      }
     },
     setVerticalNavMenuWidth() {
       if (this.windowWidth > 1200) {
@@ -422,7 +428,9 @@ export default {
       this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", false);
 
       // Reduce button
-      if (this.reduceButton) this.reduce = false;
+      if (this.reduceButton) {
+        this.reduce = false;
+      }
 
       // Menu Action buttons
       this.showCloseButton = true;

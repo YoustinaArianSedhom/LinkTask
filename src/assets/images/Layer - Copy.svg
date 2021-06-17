@@ -1,0 +1,259 @@
+  <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="617.552"
+                height="549.298"
+                viewBox="0 0 617.552 549.298"
+              >
+                <defs>
+                  <filter
+                    id="Ellipse_18"
+                    x="224.373"
+                    y="381.301"
+                    width="167.997"
+                    height="167.997"
+                    filterUnits="userSpaceOnUse"
+                  >
+                    <feOffset dx="5.694" dy="12.79" input="SourceAlpha" />
+                    <feGaussianBlur stdDeviation="8.367" result="blur" />
+                    <feFlood flood-color="#fceac4" flood-opacity="0.91" />
+                    <feComposite operator="in" in2="blur" />
+                    <feComposite in="SourceGraphic" />
+                  </filter>
+                  <filter
+                    id="Ellipse_19"
+                    x="449.555"
+                    y="201.848"
+                    width="167.997"
+                    height="180.198"
+                    filterUnits="userSpaceOnUse"
+                  >
+                    <feOffset dx="7.251" dy="37.302" input="SourceAlpha" />
+                    <feGaussianBlur stdDeviation="8.367" result="blur-2" />
+                    <feFlood flood-color="#c4ffe9" flood-opacity="0.91" />
+                    <feComposite operator="in" in2="blur-2" />
+                    <feComposite in="SourceGraphic" />
+                  </filter>
+                  <filter
+                    id="Ellipse_20"
+                    x="0"
+                    y="201.848"
+                    width="167.997"
+                    height="169.83"
+                    filterUnits="userSpaceOnUse"
+                  >
+                    <feOffset dx="1.883" dy="26.934" input="SourceAlpha" />
+                    <feGaussianBlur stdDeviation="8.367" result="blur-3" />
+                    <feFlood flood-color="#d6c9fd" flood-opacity="0.91" />
+                    <feComposite operator="in" in2="blur-3" />
+                    <feComposite in="SourceGraphic" />
+                  </filter>
+                  <filter
+                    id="Ellipse_21"
+                    x="221.59"
+                    y="0"
+                    width="167.997"
+                    height="167.997"
+                    filterUnits="userSpaceOnUse"
+                  >
+                    <feOffset dx="2.911" dy="13.694" input="SourceAlpha" />
+                    <feGaussianBlur stdDeviation="8.367" result="blur-4" />
+                    <feFlood flood-color="#bfdafe" flood-opacity="0.91" />
+                    <feComposite operator="in" in2="blur-4" />
+                    <feComposite in="SourceGraphic" />
+                  </filter>
+                </defs>
+                <g
+                  id="Group_6276"
+                  data-name="Group 6276"
+                  transform="translate(-115.782 -1799.593)"
+                >
+                  <g
+                    id="Group_6246"
+                    data-name="Group 6246"
+                    transform="translate(175.105 1856.857)"
+                  >
+                    <ellipse
+                      id="Ellipse_16"
+                      data-name="Ellipse 16"
+                      cx="243.791"
+                      cy="213.3"
+                      rx="243.791"
+                      ry="213.3"
+                      fill="none"
+                      stroke="#006cff"
+                      stroke-width="1"
+                      opacity="0.34"
+                    />
+                    <ellipse
+                      id="Ellipse_17"
+                      data-name="Ellipse 17"
+                      cx="206.668"
+                      cy="176.177"
+                      rx="206.668"
+                      ry="176.177"
+                      transform="translate(37.123 37.123)"
+                      fill="none"
+                      stroke="#006cff"
+                      stroke-width="1"
+                      opacity="0.34"
+                    />
+                  </g>
+                  <g
+                    id="Group_6247"
+                    data-name="Group 6247"
+                    transform="translate(359.562 2193.205)"
+                  >
+                    <g
+                      transform="matrix(1, 0, 0, 1, -243.78, -393.61)"
+                      filter="url(#Ellipse_18)"
+                    >
+                      <circle
+                        id="Ellipse_18-2"
+                        data-name="Ellipse 18"
+                        cx="58.897"
+                        cy="58.897"
+                        r="58.897"
+                        transform="translate(243.78 393.61)"
+                        fill="#18a864"
+                      />
+                    </g>
+                    <text
+                      id="_350_Experts_Worker"
+                      data-name="350+
+Experts Worker"
+                      transform="translate(59.438 60.795)"
+                      fill="#fff"
+                      font-size="25"
+                      font-family="Montserrat-Bold, Montserrat"
+                      font-weight="700"
+                    >
+                      <tspan x="-30.737" y="0">350+</tspan>
+                      <tspan
+                        font-size="9"
+                        font-family="Poppins-Regular, Poppins"
+                        font-weight="400"
+                      >
+                        <tspan x="-32.899" y="17">Experts Worker</tspan>
+                      </tspan>
+                    </text>
+                  </g>
+                  <g
+                    id="Group_6245"
+                    data-name="Group 6245"
+                    transform="translate(583.188 2001.441)"
+                  >
+                    <g
+                      transform="matrix(1, 0, 0, 1, -467.41, -201.85)"
+                      filter="url(#Ellipse_19)"
+                    >
+                      <circle
+                        id="Ellipse_19-2"
+                        data-name="Ellipse 19"
+                        cx="58.897"
+                        cy="58.897"
+                        r="58.897"
+                        transform="translate(467.41 201.85)"
+                        fill="#e94d61"
+                      />
+                    </g>
+                    <text
+                      id="_104_Winner_Award"
+                      data-name="104
+Winner Award"
+                      transform="translate(57.812 60.559)"
+                      fill="#fff"
+                      font-size="25"
+                      font-family="Montserrat-Bold, Montserrat"
+                      font-weight="700"
+                    >
+                      <tspan x="-22" y="0">104</tspan>
+                      <tspan
+                        font-size="9"
+                        font-family="Poppins-Regular, Poppins"
+                        font-weight="400"
+                      >
+                        <tspan x="-31.414" y="17">Winner Award</tspan>
+                      </tspan>
+                    </text>
+                  </g>
+                  <g
+                    id="Group_6250"
+                    data-name="Group 6250"
+                    transform="translate(139 2001.441)"
+                  >
+                    <g
+                      transform="matrix(1, 0, 0, 1, -23.22, -201.85)"
+                      filter="url(#Ellipse_20)"
+                    >
+                      <circle
+                        id="Ellipse_20-2"
+                        data-name="Ellipse 20"
+                        cx="58.897"
+                        cy="58.897"
+                        r="58.897"
+                        transform="translate(23.22 201.85)"
+                        fill="#fabb3f"
+                      />
+                    </g>
+                    <text
+                      id="_1200_Customers"
+                      data-name="1200
+Customers"
+                      transform="translate(59 59.559)"
+                      fill="#fff"
+                      font-size="23"
+                      font-family="Montserrat-Bold, Montserrat"
+                      font-weight="700"
+                    >
+                      <tspan x="-26.887" y="0">1200</tspan>
+                      <tspan
+                        font-size="10"
+                        font-family="Poppins-Regular, Poppins"
+                        font-weight="400"
+                      >
+                        <tspan x="-27.415" y="16">Customers</tspan>
+                      </tspan>
+                    </text>
+                  </g>
+                  <g
+                    id="Group_6248"
+                    data-name="Group 6248"
+                    transform="translate(359.562 1811)"
+                  >
+                    <g
+                      transform="matrix(1, 0, 0, 1, -243.78, -11.41)"
+                      filter="url(#Ellipse_21)"
+                    >
+                      <circle
+                        id="Ellipse_21-2"
+                        data-name="Ellipse 21"
+                        cx="58.897"
+                        cy="58.897"
+                        r="58.897"
+                        transform="translate(243.78 11.41)"
+                        fill="#0093d2"
+                      />
+                    </g>
+                    <text
+                      id="_22K_Projects_Done"
+                      data-name="22K+
+Projects Done"
+                      transform="translate(59.437 61)"
+                      fill="#fff"
+                      font-size="25"
+                      font-family="Montserrat-Bold, Montserrat"
+                      font-weight="700"
+                    >
+                      <tspan x="-31.037" y="0">22K+</tspan>
+                      <tspan
+                        font-size="9"
+                        font-family="Poppins-Regular, Poppins"
+                        font-weight="400"
+                      >
+                        <tspan x="-30.721" y="17">Projects Done</tspan>
+                      </tspan>
+                    </text>
+                  </g>
+                </g>
+              </svg>

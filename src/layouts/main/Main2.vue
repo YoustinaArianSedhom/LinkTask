@@ -140,7 +140,7 @@
 
 <script>
 import BackToTop from "vue-backtotop";
-import HNavMenu from "@/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue";
+// import HNavMenu from "@/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue";
 import navMenuItems from "@/layouts/components/vertical-nav-menu/navMenuItems.js";
 // import TheCustomizer       from '@/layouts/components/customizer/TheCustomizer.vue'
 import TheNavbarHorizontal from "@/layouts/components/navbar/TheNavbarHorizontal.vue";
@@ -152,7 +152,7 @@ import VNavMenu from "@/layouts/components/vertical-nav-menu/VerticalNavMenu.vue
 export default {
   components: {
     BackToTop,
-    HNavMenu,
+    // HNavMenu,
     // TheCustomizer,
     TheFooter,
     TheNavbarHorizontal,
@@ -189,7 +189,7 @@ export default {
   },
   computed: {
     navMenuLogo() {
-      return require(`@/assets/images/logo/logo.png`);
+      return require(`@/assets/images/logo.png`);
     },
     isIdle() {
       return this.$store.state.idleVue.isIdle;

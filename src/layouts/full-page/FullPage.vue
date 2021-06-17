@@ -87,7 +87,7 @@ export default {
   },
   computed: {
     navMenuLogo() {
-      return require(`@/assets/images/logo/logo.png`);
+      return require(`@/assets/images/logo.png`);
     },
     isIdle() {
       return this.$store.state.idleVue.isIdle;

@@ -64,11 +64,9 @@ export default {
     return {
       blogColumn3,
       List: [
-        require("@/assets/images/Clip@1X.png"),
-        require("@/assets/images/Clip@1X.png"),
-        require("@/assets/images/Clip@1X.png"),
-        require("@/assets/images/Clip@1X.png"),
-        require("@/assets/images/Clip@1X.png")
+        require("@/assets/images/Untitled.png"),
+        require("@/assets/images/Untitled2.png"),
+        require("@/assets/images/Untitled3.png")
       ],
       swiperOption: {
         zoom: true,

@@ -57,7 +57,7 @@
           </div>
           <div class="card-body border-rad-bottom">
             <h4 class="card-title mb-2">
-              <a href="/blog-detail">{{ post3Column.title }}</a>
+              {{ post3Column.title }}
             </h4>
             <p class="card-text">{{ post3Column.content }}</p>
             <div class="card-footer pt-2 p-0">
