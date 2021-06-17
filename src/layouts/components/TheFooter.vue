@@ -154,7 +154,8 @@
     <vs-row>
       <!-- <vs-divider color="white" /> -->
       <div
-        class="flex w-full bg-img vx-row no-gutter bg-primary items-center justify-center"
+        class="flex w-full bg-img vx-row no-gutter bg-primary items-center justify-center h-14"
+        style="height:"
       >
         <span class="text-white"
           >All right receved-Link Development Company © 2020
