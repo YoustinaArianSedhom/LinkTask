@@ -1,0 +1,120 @@
+<!-- =========================================================================================
+  File Name: TheNavbar.vue
+  Description: Navbar component
+  Component Name: TheNavbar
+  ----------------------------------------------------------------------------------------
+  Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+  Author: Pixinvent
+  Author URL: http://www.themeforest.net/user/pixinvent
+========================================================================================== -->
+
+<template>
+  <div class="relative">
+    <!-- :class="classObj" -->
+    <div class="vx-navbar-wrapper">
+      <vs-navbar
+        class="vx-navbar navbar-custom navbar-skelton bg-primary text-white"
+      >
+        <!-- SM - OPEN SIDEBAR BUTTON -->
+        <feather-icon
+          class=" cursor-pointer p-2"
+          icon="MenuIcon"
+          @click.stop="showSidebar"
+        />
+
+        <!-- <bookmarks :navbarColor="navbarColor" v-if="windowWidth >= 992" /> -->
+
+        <router-link
+          tag="div"
+          to="/"
+          class="vx-logo cursor-pointer mr-auto flex items-start"
+        >
+          <logo class="w-16 mr-6 ml-6 fill-current text-primary" />
+        </router-link>
+        <vs-spacer v-if="windowWidth >= 992" />
+
+        <!-- <i18n class="ml-2 mr-2" /> -->
+
+        <!-- <search-bar /> -->
+
+        <!-- <cart-drop-down /> -->
+        <feather-icon class=" cursor-pointer p-2" icon="SearchIcon" />
+
+        <notification-drop-down class="ml-2" />
+
+        <profile-drop-down />
+      </vs-navbar>
+    </div>
+  </div>
+</template>
+
+<script>
+// import Bookmarks from "./components/Bookmarks.vue";
+import NotificationDropDown from "./components/NotificationDropDown.vue";
+import ProfileDropDown from "./components/ProfileDropDown.vue";
+import Logo from "../Logo.vue";
+
+export default {
+  name: "the-navbar-vertical",
+  props: {
+    navbarColor: {
+      type: String,
+      default: "#038896"
+    }
+  },
+  data() {
+    return {
+      navBar: false
+    };
+  },
+  components: {
+    Logo,
+    NotificationDropDown,
+    ProfileDropDown
+  },
+  computed: {
+    navbarColorLocal() {
+      return this.$store.state.theme === "dark" &&
+        this.navbarColor === "#038896"
+        ? "#038896"
+        : this.navbarColor;
+    },
+    verticalNavMenuWidth() {
+      return this.$store.state.verticalNavMenuWidth;
+    },
+    textColor() {
+      return {
+        "text-white":
+          (this.navbarColor !== "#038896" &&
+            this.$store.state.theme === "dark") ||
+          (this.navbarColor !== "#038896" && this.$store.state.theme !== "dark")
+      };
+    },
+    windowWidth() {
+      return this.$store.state.windowWidth;
+    }
+
+    // NAVBAR STYLE
+    // classObj() {
+    //   if (this.verticalNavMenuWidth === "default") {
+    //     return "navbar-default";
+    //   } else if (this.verticalNavMenuWidth === "reduced") {
+    //     return "navbar-reduced";
+    //   } else if (this.verticalNavMenuWidth) {
+    //     return "navbar-full";
+    //   }
+    // }
+  },
+  methods: {
+    showSidebar() {
+      if (this.navBar == false) {
+        this.navBar = true;
+        this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", true);
+      } else {
+        this.navBar = false;
+        this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", false);
+      }
+    }
+  }
+};
+</script>
