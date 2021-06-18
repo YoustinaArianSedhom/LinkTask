@@ -12,51 +12,26 @@
           icon="MenuIcon"
           @click.stop="showSidebar"
         ></feather-icon>
-        <!-- <bookmarks :navbarColor="navbarColor" v-if="windowWidth >= 992" /> -->
 
         <router-link
           tag="div"
           to="/"
           class="vx-logo cursor-pointer mx-auto flex items-center"
         >
-          <!-- <logo class="w-10 mr-4 fill-current ٍٍtext-primary" />
-        <span class="vx-logo-text text-primary">Biajdo Admin Portal</span> -->
-
-          <!-- <logo class="w-10 mr-4 fill-current text-primary" /> -->
           <span class="vx-logo-text text-primary">{{ $t("Virtual") }}</span>
         </router-link>
 
         <i18n style="padding-right: 20px; padding-left: 20px;" />
-
-        <!-- <search-bar />
-
-      <cart-drop-down /> -->
-
-        <!-- <notification-drop-down /> -->
       </vs-navbar>
     </div>
   </div>
 </template>
 
 <script>
-// import Bookmarks            from './components/Bookmarks.vue'
-// import I18n from "./components/I18n.vue";
-// import SearchBar            from './components/SearchBar.vue'
-// import CartDropDown         from './components/CartDropDown.vue'
-// import NotificationDropDown from "./components/NotificationDropDown.vue";
-// import Logo                 from '../Logo.vue'
-
 export default {
   name: "the-navbar-horizontal",
   props: {},
-  components: {
-    // Logo,
-    // Bookmarks,
-    // I18n
-    // SearchBar,
-    // CartDropDown,
-    // NotificationDropDown,
-  },
+  components: {},
   computed: {
     navbarColor() {
       let color = "#fff";

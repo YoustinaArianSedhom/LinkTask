@@ -53,9 +53,6 @@ export default {
   components: {
     Logo,
     Bookmarks,
-    // I18n,
-    // CartDropDown,
-    // NotificationDropDown,
     ProfileDropDown
   },
   computed: {

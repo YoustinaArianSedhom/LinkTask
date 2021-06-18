@@ -1,6 +1,4 @@
 <template>
-  <!-- id="container2"
-    class="flex  w-full bg-img vx-row no-gutter justify-center items-center " -->
   <div>
     <div
       class="vx-row w-full text-black flex justify-left mt-10 text-2xl font-bold "
@@ -29,7 +27,7 @@
           </div>
           <div class="card-body border-rad-bottom">
             <h4 class="card-title mb-2">
-              <a href="/blog-detail">{{ post3Column.title }}</a>
+              {{ post3Column.title }}
             </h4>
             <p class="card-text">{{ post3Column.content }}</p>
             <div class="card-footer pt-2 p-0">
@@ -40,13 +38,6 @@
                     post3Column.publishedAt | formatDate()
                   }}</span>
                 </a>
-                <!-- <a class="d-flex align-content-end text-muted">
-                <i
-                  :class="post3Column.user_icon"
-                  class="fa align-self-center mr-2"
-                ></i>
-                <span class="font-sm">{{ post3Column.user_name }}</span>
-              </a> -->
               </div>
             </div>
           </div>
@@ -57,7 +48,7 @@
 </template>
 
 <script>
-import blogColumn3 from "@/views/JsonFiles/Country.json";
+import blogColumn3 from "@/views/JsonFiles/data.json";
 
 export default {
   data() {

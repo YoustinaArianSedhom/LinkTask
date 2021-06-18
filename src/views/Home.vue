@@ -98,13 +98,18 @@
         </vx-card>
       </div>
     </div>
+
+    <div
+      class="mb-base  w-full FixedHeight mx-1"
+      style="background-image: url('https://travel.mqcdn.com/mapquest/travel/wp-content/uploads/2020/06/GettyImages-548565141-e1592719799177.jpg')"
+    ></div>
   </div>
 </template>
 
 <script>
 import "swiper/dist/css/swiper.min.css";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-import blogColumn3 from "@/views/JsonFiles/Country.json";
+import blogColumn3 from "@/views/JsonFiles/data.json";
 
 export default {
   data() {
@@ -129,21 +134,6 @@ export default {
         slidesPerView: 1,
         slidesPerColumn: 1,
         spaceBetween: 5
-
-        // breakpoints: {
-        //   1024: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 40
-        //   },
-        //   768: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 30
-        //   },
-        //   640: {
-        //     slidesPerView: 1,
-        //     spaceBetween: 20
-        //   }
-        // }
       }
     };
   },

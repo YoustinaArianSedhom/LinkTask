@@ -51,7 +51,7 @@
   </div>
 </template>
 <script>
-import blogColumn3 from "@/views/JsonFiles/Country.json";
+import blogColumn3 from "@/views/JsonFiles/data.json";
 
 export default {
   data() {
