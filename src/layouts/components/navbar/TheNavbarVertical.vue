@@ -101,7 +101,7 @@
                     <router-link
                       tag="div"
                       to="/News"
-                      class="vx-logo cursor-pointer mr-auto flex items-start"
+                      class=" cursor-pointer mr-auto  items-start"
                     >
                       <span class="text-lg p-10 text-grey-light"> News</span>
                     </router-link>
