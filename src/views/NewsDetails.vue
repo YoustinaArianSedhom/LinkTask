@@ -1,7 +1,7 @@
 <template>
-  <div class="">
-    <div class=" ">
-      <vx-card class="">
+  <div class="pt-17">
+    <div class=" mt-17">
+      <vx-card class="mt-17">
         <div slot="no-body">
           <img
             :src="Model.urlToImage"

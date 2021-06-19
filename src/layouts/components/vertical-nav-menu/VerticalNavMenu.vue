@@ -52,7 +52,7 @@
             </template>
 
             <!-- Toggle Buttons -->
-            <template v-else-if="!showCloseButton && !verticalNavMenuItemlgin">
+            <template v-else-if="!showCloseButton && !verticalNavMenuItemsMin">
               <feather-icon
                 id="btnVNavMenuMinToggler"
                 class="mr-0 cursor-pointer"
@@ -67,135 +67,67 @@
         <!-- /Header -->
 
         <!-- Header Shadow -->
-        <!-- <div class="shadow-bottom" v-show="showShadowBottom" /> -->
-        <div class="vx-row w-full">
-          <div class=" pl-20 vx-col text-white">
-            <div class="text-white" target="_blank">
-              <feather-icon
-                icon="TwitterIcon"
-                svgClasses="h-6 w-6"
-                class="ml-4 mr-4"
-              />
-            </div>
-            <div class="text-white" target="_blank">
-              <feather-icon
-                icon="FacebookIcon"
-                svgClasses="h-6 w-6"
-                class="ml-4 mr-4"
-              />
-            </div>
-            <div class="text-white" target="_blank">
-              <feather-icon
-                icon="YoutubeIcon"
-                svgClasses="h-6 w-6"
-                class="ml-4 mr-4"
-              />
-            </div>
-            <div class="text-white" target="_blank">
-              <feather-icon
-                icon="InstagramIcon"
-                svgClasses="h-6 w-6"
-                class="ml-4 mr-4"
-              />
-            </div>
-            <div class="text-white" target="_blank">
-              <feather-icon
-                icon="LinkedinIcon"
-                svgClasses="h-6 w-6"
-                class="ml-4 mr-4"
-              />
-            </div>
-          </div>
-          <div class=" pl-20 vx-col ">
-            <div>
-              <span class="text-2xl p-10 text-white">Home</span>
-            </div>
-            <div>
-              <span class="text-2xl p-10 text-white">About Us</span>
-            </div>
-            <div>
-              <span class="text-lg p-10 text-grey-light"> who are us?</span>
-            </div>
-            <div>
-              <span class="text-lg p-10 text-grey-light"> why us?</span>
-            </div>
-            <div>
-              <span class="text-2xl p-10 text-white">News</span>
-            </div>
-            <div>
-              <span class="text-lg p-10 text-grey-light"> News</span>
-            </div>
-            <div>
-              <span class="text-lg p-10 text-grey-light"> Events</span>
-            </div>
-            <div>
-              <span class="text-2xl p-10  text-white">Careers</span>
-            </div>
-            <div>
-              <span class="text-lg p-10 text-grey-light"> Opportunities</span>
-            </div>
-            <div>
-              <span class="text-2xl mt-20 p-10 text-white">Contact Us</span>
-            </div>
-            <div>
-              <span class="text-2xl p-10 text-white">Site Map</span>
-            </div>
+        <div class="shadow-bottom" v-show="showShadowBottom" />
 
-            <!-- Menu Items -->
-            <!-- <VuePerfectScrollbar
-              ref="verticalNavMenuPs"
-              class="scroll-area-v-nav-menu pt-2"
-              :settings="settings"
-              @ps-scroll-y="psSectionScroll"
-              :key="$vs.rtl"
+        <!-- Menu Items -->
+        <VuePerfectScrollbar
+          ref="verticalNavMenuPs"
+          class="scroll-area-v-nav-menu pt-2"
+          :settings="settings"
+          @ps-scroll-y="psSectionScroll"
+          :key="$vs.rtl"
+        >
+          <template v-for="(item, index) in menuItemsUpdated">
+            <!-- Group Header -->
+            <span
+              v-if="item.header && !verticalNavMenuItemsMin"
+              class="navigation-header truncate"
+              :key="`header-${index}`"
             >
-              <template v-for="(item, index) in menuItemsUpdated">
-                <span
-                  v-if="item.header && !verticalNavMenuItemlgin"
-                  class="navigation-header truncate"
-                  :key="`header-${index}`"
+              {{ $t(item.i18n) || item.header }}
+            </span>
+            <!-- /Group Header -->
+
+            <template v-else-if="!item.header">
+              <!-- Nav-Item -->
+              <v-nav-menu-item
+                v-if="!item.submenu"
+                :key="`item-${index}`"
+                :index="index"
+                :to="item.slug !== 'external' ? item.url : null"
+                :href="item.slug === 'external' ? item.url : null"
+                :icon="item.icon"
+                :target="item.target"
+                :isDisabled="item.isDisabled"
+                :slug="item.slug"
+              >
+                <span v-show="!verticalNavMenuItemsMin" class="truncate">{{
+                  $t(item.i18n) || item.name
+                }}</span>
+                <vs-chip
+                  class="ml-auto"
+                  :color="item.tagColor"
+                  v-if="item.tag && (isMouseEnter || !reduce)"
+                  >{{ item.tag }}</vs-chip
                 >
-                  {{ $t(item.i18n) || item.header }}
-                </span>
+              </v-nav-menu-item>
 
-                <template v-else-if="!item.header">
-                  <v-nav-menu-item
-                    v-if="!item.submenu"
-                    :key="`item-${index}`"
-                    :index="index"
-                    :to="item.slug !== 'external' ? item.url : null"
-                    :href="item.slug === 'external' ? item.url : null"
-                    :icon="item.icon"
-                    :target="item.target"
-                    :isDisabled="item.isDisabled"
-                    :slug="item.slug"
-                  >
-                    <span v-show="!verticalNavMenuItemlgin" class="truncate">{{
-                      $t(item.i18n) || item.name
-                    }}</span>
-                    <vs-chip
-                      class="ml-auto"
-                      :color="item.tagColor"
-                      v-if="item.tag && (ilgouseEnter || !reduce)"
-                      >{{ item.tag }}</vs-chip
-                    >
-                  </v-nav-menu-item>
-
-                  <template v-else>
-                    <v-nav-menu-group
-                      v-if="item.show"
-                      :key="`group-${index}`"
-                      :openHover="openGroupHover"
-                      :group="item"
-                      :groupIndex="index"
-                      :open="isGroupActive(item)"
-                    />
-                  </template>
-                </template>
+              <!-- Nav-Group -->
+              <template v-else>
+                <v-nav-menu-group
+                  v-if="item.show"
+                  :key="`group-${index}`"
+                  :openHover="openGroupHover"
+                  :group="item"
+                  :groupIndex="index"
+                  :open="isGroupActive(item)"
+                />
               </template>
-            </VuePerfectScrollbar> -->
-          </div>
-        </div>
+              <!-- /Nav-Group -->
+            </template>
+          </template>
+        </VuePerfectScrollbar>
+        <!-- /Menu Items -->
       </div>
     </vs-sidebar>
 
@@ -210,18 +142,18 @@
 </template>
 
 <script>
-// import VuePerfectScrollbar from "vue-perfect-scrollbar";
-// import VNavMenuGroup from "./VerticalNavMenuGroup.vue";
-// import VNavMenuItem from "./VerticalNavMenuItem.vue";
+import VuePerfectScrollbar from "vue-perfect-scrollbar";
+import VNavMenuGroup from "./VerticalNavMenuGroup.vue";
+import VNavMenuItem from "./VerticalNavMenuItem.vue";
 
 import Logo from "../Logo.vue";
 
 export default {
   name: "v-nav-menu",
   components: {
-    // VNavMenuGroup,
-    // VNavMenuItem,
-    // VuePerfectScrollbar,
+    VNavMenuGroup,
+    VNavMenuItem,
+    VuePerfectScrollbar,
     Logo
   },
   props: {
@@ -234,9 +166,9 @@ export default {
   },
   data: () => ({
     clickNotClose: false, // disable close navMenu on outside click
-    ilgouseEnter: false,
+    isMouseEnter: false,
     reduce: false, // determines if navMenu is reduce - component property
-    showCloseButton: false, // show close button in lgaller devices
+    showCloseButton: false, // show close button in smaller devices
     settings: {
       // perfectScrollbar settings
       maxScrollbarLength: 60,
@@ -308,8 +240,8 @@ export default {
     isVerticalNavMenuReduced() {
       return Boolean(this.reduce && this.reduceButton);
     },
-    verticalNavMenuItemlgin() {
-      return this.$store.state.verticalNavMenuItemlgin;
+    verticalNavMenuItemsMin() {
+      return this.$store.state.verticalNavMenuItemsMin;
     },
     scrollbarTag() {
       return this.$store.getters.scrollbarTag;
@@ -320,9 +252,8 @@ export default {
   },
   watch: {
     $route() {
-      if (this.isVerticalNavMenuActive && this.showCloseButton) {
+      if (this.isVerticalNavMenuActive && this.showCloseButton)
         this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", false);
-      }
     },
     reduce(val) {
       const verticalNavMenuWidth = val
@@ -350,27 +281,23 @@ export default {
     onMenuSwipe(event) {
       if (event.direction === 4 && this.$vs.rtl) {
         // Swipe Right
-        if (this.isVerticalNavMenuActive && this.showCloseButton) {
+        if (this.isVerticalNavMenuActive && this.showCloseButton)
           this.isVerticalNavMenuActive = false;
-        }
       } else if (event.direction === 2 && !this.$vs.rtl) {
         // Swipe Left
-        if (this.isVerticalNavMenuActive && this.showCloseButton) {
+        if (this.isVerticalNavMenuActive && this.showCloseButton)
           this.isVerticalNavMenuActive = false;
-        }
       }
     },
     onSwipeAreaSwipe(event) {
       if (event.direction === 4 && !this.$vs.rtl) {
         // Swipe Right
-        if (!this.isVerticalNavMenuActive && this.showCloseButton) {
+        if (!this.isVerticalNavMenuActive && this.showCloseButton)
           this.isVerticalNavMenuActive = true;
-        }
       } else if (event.direction === 2 && this.$vs.rtl) {
         // Swipe Left
-        if (!this.isVerticalNavMenuActive && this.showCloseButton) {
+        if (!this.isVerticalNavMenuActive && this.showCloseButton)
           this.isVerticalNavMenuActive = true;
-        }
       }
     },
     psSectionScroll() {
@@ -379,16 +306,14 @@ export default {
       this.showShadowBottom = scroll_el.scrollTop > 0;
     },
     mouseEnter() {
-      if (this.reduce) {
+      if (this.reduce)
         this.$store.commit("UPDATE_VERTICAL_NAV_MENU_ITEMS_MIN", false);
-        this.ilgouseEnter = true;
-      }
+      this.isMouseEnter = true;
     },
     mouseLeave() {
-      if (this.reduce) {
+      if (this.reduce)
         this.$store.commit("UPDATE_VERTICAL_NAV_MENU_ITEMS_MIN", true);
-        this.ilgouseEnter = false;
-      }
+      this.isMouseEnter = false;
     },
     setVerticalNavMenuWidth() {
       if (this.windowWidth > 1200) {
@@ -400,12 +325,12 @@ export default {
           this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", true);
 
           // Set Menu Items Only Icon Mode
-          const verticalNavMenuItemlgin = !!(
-            this.reduceButton && !this.ilgouseEnter
+          const verticalNavMenuItemsMin = !!(
+            this.reduceButton && !this.isMouseEnter
           );
           this.$store.commit(
             "UPDATE_VERTICAL_NAV_MENU_ITEMS_MIN",
-            verticalNavMenuItemlgin
+            verticalNavMenuItemsMin
           );
 
           // Menu Action buttons
@@ -428,9 +353,7 @@ export default {
       this.$store.commit("TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE", false);
 
       // Reduce button
-      if (this.reduceButton) {
-        this.reduce = false;
-      }
+      if (this.reduceButton) this.reduce = false;
 
       // Menu Action buttons
       this.showCloseButton = true;
@@ -470,8 +393,8 @@ export default {
       //   this.$store.commit('TOGGLE_IS_VERTICAL_NAV_MENU_ACTIVE', true)
 
       //   // Set Menu Items Only Icon Mode
-      //   const verticalNavMenuItemlgin = (this.reduceButton && !this.ilgouseEnter) ? true : false
-      //   this.$store.commit('UPDATE_VERTICAL_NAV_MENU_ITEMS_MIN', verticalNavMenuItemlgin)
+      //   const verticalNavMenuItemsMin = (this.reduceButton && !this.isMouseEnter) ? true : false
+      //   this.$store.commit('UPDATE_VERTICAL_NAV_MENU_ITEMS_MIN', verticalNavMenuItemsMin)
 
       //   // Menu Action buttons
       //   this.clickNotClose   = true

@@ -35,11 +35,11 @@
       @updateNavbarColor      = "updateNavbarColor"
       @updateRouterTransition = "updateRouterTransition" /> -->
 
-    <v-nav-menu
+    <!-- <v-nav-menu
       :navMenuItems="navMenuItems"
       :logo="navMenuLogo"
       parent=".layout--main"
-    />
+    /> -->
 
     <div
       id="content-area"
@@ -47,7 +47,7 @@
     >
       <div id="content-overlay" />
       <!-- Navbar -->
-      <template v-if="mainLayoutType === 'horizontal' && windowWidth >= 1200">
+      <!-- <template v-if="mainLayoutType === 'horizontal' && windowWidth >= 1200">
         <the-navbar-horizontal
           :navbarType="navbarType"
           :logo="navMenuLogo"
@@ -58,7 +58,7 @@
         />
 
         <div style="height: 62px;" v-if="navbarType === 'static'"></div>
-        <!--
+        <!-- 
         <h-nav-menu
           :class="[
             { 'text-white': isNavbarDark && !isThemeDark },
@@ -76,10 +76,10 @@
             { 'text-base': !isNavbarDark && isThemeDark }
           ]"
         />
-      </template>
+      </template> -->
       <!-- /Navbar -->
 
-      <div class="content-wrapper ">
+      <div class="content-wrapper sm:px-0 md:px-4 lg:px-24 xl:px-64">
         <div class="router-view">
           <div class="router-content">
             <transition :name="routerTransition">
@@ -168,13 +168,13 @@
 <script>
 import BackToTop from "vue-backtotop";
 // import HNavMenu from "@/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue";
-import navMenuItems from "@/layouts/components/vertical-nav-menu/navMenuItems.js";
+// import navMenuItems from "@/layouts/components/vertical-nav-menu/navMenuItems.js";
 // import TheCustomizer       from '@/layouts/components/customizer/TheCustomizer.vue'
-import TheNavbarHorizontal from "@/layouts/components/navbar/TheNavbarHorizontal.vue";
+// import TheNavbarHorizontal from "@/layouts/components/navbar/TheNavbarHorizontal.vue";
 import TheNavbarVertical from "@/layouts/components/navbar/TheNavbarVertical.vue";
 import TheFooter from "@/layouts/components/TheFooter.vue";
 import themeConfig from "@/../themeConfig.js";
-import VNavMenu from "@/layouts/components/vertical-nav-menu/VerticalNavMenu.vue";
+// import VNavMenu from "@/layouts/components/vertical-nav-menu/VerticalNavMenu.vue";
 
 export default {
   components: {
@@ -182,9 +182,9 @@ export default {
     // HNavMenu,
     // TheCustomizer,
     TheFooter,
-    TheNavbarHorizontal,
+    // TheNavbarHorizontal,
     TheNavbarVertical,
-    VNavMenu
+    // VNavMenu
   },
   data() {
     return {
@@ -196,7 +196,7 @@ export default {
       isNavbarDark: false,
       navbarColor: themeConfig.navbarColor || "#fff",
       navbarType: themeConfig.navbarType || "floating",
-      navMenuItems,
+      // navMenuItems,
       routerTransition: themeConfig.routerTransition || "none",
       routeTitle: this.$route.meta.pageTitle
     };

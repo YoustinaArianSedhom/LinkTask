@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# LinkTask
-=======
 # modern
 
 ## Project setup
@@ -27,4 +24,3 @@ npm run test
 ```
 npm run lint
 ```
->>>>>>> 18a039ec02e27bc9a7b76497a5ac524ef1dc66a2

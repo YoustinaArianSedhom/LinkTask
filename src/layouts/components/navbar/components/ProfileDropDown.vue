@@ -1,4 +1,3 @@
-import _color from '@/assets/utils/color.js';
 <template>
   <div>
     <div class="the-navbar__user-meta flex items-center">
@@ -6,13 +5,12 @@ import _color from '@/assets/utils/color.js';
         <img
           key="onlineImg"
           src="@/assets/images/img.png"
-          alt="user-img"
           width="45"
           height="45"
-          class="rounded-full shadow-md cursor-pointer block"
+          class="rounded-full cursor-pointer block"
         />
       </div>
-      <div class="  ">
+      <div class="">
         <p class="text-sm">
           {{ "User Name" }}
         </p>
@@ -123,3 +121,4 @@ export default {
   }
 };
 </script>
+<style></style>
