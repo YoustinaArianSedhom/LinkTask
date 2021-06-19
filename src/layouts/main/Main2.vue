@@ -58,7 +58,7 @@
         />
 
         <div style="height: 62px;" v-if="navbarType === 'static'"></div>
-        <!-- 
+        <!--
         <h-nav-menu
           :class="[
             { 'text-white': isNavbarDark && !isThemeDark },
@@ -140,7 +140,7 @@
 
 <script>
 import BackToTop from "vue-backtotop";
-import HNavMenu from "@/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue";
+// import HNavMenu from "@/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue";
 import navMenuItems from "@/layouts/components/vertical-nav-menu/navMenuItems.js";
 // import TheCustomizer       from '@/layouts/components/customizer/TheCustomizer.vue'
 import TheNavbarHorizontal from "@/layouts/components/navbar/TheNavbarHorizontal.vue";
@@ -152,7 +152,7 @@ import themeConfig from "@/../themeConfig.js";
 export default {
   components: {
     BackToTop,
-    HNavMenu,
+    // HNavMenu,
     // TheCustomizer,
     TheFooter,
     TheNavbarHorizontal,

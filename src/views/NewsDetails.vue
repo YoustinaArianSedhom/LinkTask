@@ -1,6 +1,6 @@
 <template>
   <div class="pt-17">
-    <div class="FixedSize mt-17">
+    <div class="FixedSize mt-32">
       <vx-card class="mt-17">
         <div slot="no-body">
           <img

@@ -30,7 +30,13 @@ const router = new Router({
           path: "/NewsDetails",
           name: "NewsDetails",
           component: () => import("@/views/NewsDetails.vue"),
+
           meta: {
+            breadcrumb: [
+              { title: "Home", url: "/" },
+              { title: "News", url: "/News" },
+              { title: "News Details", active: true }
+            ],
             rule: "isPublic"
           }
         },
