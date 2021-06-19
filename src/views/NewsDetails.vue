@@ -20,7 +20,7 @@
       </vx-card>
     </div>
 
-    <h2 class="pt-10 text-bold">Related Topics</h2>
+    <h2 class="pt-10 m-10 text-bold">Related Topics</h2>
     <div class="vx-row text-center">
       <div
         v-for="(post3Column, index) of sourceCategory"
@@ -29,7 +29,7 @@
         style="background-image: url('https://travel.mqcdn.com/mapquest/travel/wp-content/uploads/2020/06/GettyImages-548565141-e1592719799177.jpg')"
       >
         <div
-          class="vx-col justify-end  rounded-lg absolute bottom-0 inset-x-0 px-4 pt-2 m-4 mx-4 bg-white mt-64 h-48 bg-opacity-100 "
+          class="vx-col justify-end  rounded-lg absolute bottom-0 inset-x-0 px-4 pt-2 m-10 mx-4 bg-white mt-64 h-48 bg-opacity-100 "
         >
           <div class="mt-4 font-semibold"><h6>Category</h6></div>
           <div class="h-34">
